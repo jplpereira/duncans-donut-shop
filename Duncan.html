@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+	<meta charset="utf-8">
+	<head>
+	  <title>Duncan's Just-In-Time Donuts</title>
+		<script src="src/duncan.js"></script>
+	</head>
+
+	<body>
+		<img src="img/donut_shop.jpg" align="left" />
+		<center>
+		<h2>Duncan's Just-In-Time Donuts</h2>
+		<i>All donuts 50 cents each, cake or glazed</i>
+		<form action="" method="post">
+			<br>
+			<div>
+				# of cake donuts: <input type="number" id="cakedonuts"
+				oninput="updateOrder()" value="0" min="0" />
+			</div>
+			<div>
+				# of glazed donuts: <input type="number" id="glazeddonuts"
+				oninput="updateOrder()" value="0"  min="0" />
+			</div>
+			<div>
+				Subtotal: <input id="subtotal" type="text" readonly="readonly" />
+			</div>
+			<div>
+				Tax: <input id="tax" type="text" readonly="readonly" />
+			</div>
+			<div>
+				Total: <input id="total" type="text" readonly="readonly" />
+			</div>
+			<br>
+		</form>
+		<i><p id="niceday"></p></i>
+	</center>
+	</body>
+</html>
