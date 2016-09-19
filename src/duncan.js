@@ -2,19 +2,20 @@ function greatings(){
   alert("Welcome to Duncan's Just-In-Time Donuts!");
 }
 
-function id(element){
-  return document.getElementById(element);
+function getElement(id){
+  var element = document.getElementById(id);
+  return element;
 }
 
 function getNumCakeDonuts(){
   var numCakeDonuts = 0;
-  numCakeDonuts = parseFloat(id("cakedonuts").value);
+  numCakeDonuts = parseFloat(getElement("cakedonuts").value);
   return numCakeDonuts;
 }
 
 function getNumGlazedDonuts(){
   var numGlazedDonuts = 0;
-  numGlazedDonuts = parseFloat(id("glazeddonuts").value);
+  numGlazedDonuts = parseFloat(getElement("glazeddonuts").value);
   return numGlazedDonuts;
 }
 
@@ -39,9 +40,9 @@ function getTotal(){
 }
 
 function updateOrder(){
-  const NICEDAY = "Have a nice day!"
-  id("subtotal").value = "$" + getSubTotal().toFixed(2);
-  id("tax").value = "$" + getTax().toFixed(2);
-  id("total").value = "$" + getTotal().toFixed(2);
-  id("niceday").innerHTML = NICEDAY;
+  const NICEDAY = "Have a nice day!";
+  getElement("subtotal").value = "$" + getSubTotal().toFixed(2);
+  getElement("tax").value = "$" + getTax().toFixed(2);
+  getElement("total").value = "$" + getTotal().toFixed(2);
+  getElement("niceday").innerHTML = NICEDAY;
 }
