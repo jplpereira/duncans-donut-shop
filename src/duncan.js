@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 function greatings(){
   alert("Welcome to Duncan's Just-In-Time Donuts!");
 }
